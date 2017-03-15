@@ -1,26 +1,112 @@
 [
-   {
+  	 {
 	 "id": "1",
-	 "titulo": "El Juego de Ender",
-	 "autor": "Orson Scott Card",
-	 "editorial": "Ediciones B / Zeta",
-	 "descripcion": "La Tierra está amenazada por una especie extraterrestre de insectos que pretende destruir la humanidad. Para vencerlos se precisa la intervención de un genio militar, por lo cual se permite el nacimiento de Ender, tercer hijo de una pareja en un mundo que limita a dos el número de descendientes. Ender se entrenará en una estación espacial, superará a sus rivales y se convertirá en la persona capaz de dirigir las flotas terrestres contra los insectos de otros mundos.",
-	 "img": "img/img1.jpg"
+	 "nombre": "Espaldilla asada con pimientos y cebolletas",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
 	},
-	{
+	 {
 	 "id": "2",
-	 "titulo": "Juego de tronos",
-	 "autor": "George R. R. Martin",
-	 "editorial": "Gigamesh",
-	 "descripcion": "Tras el largo verano, el invierno se acerca a los Siete Reinos. Lord Eddard Stark, señor de Invernalia, deja sus dominios para unirse a la corte de su amigo el rey Robert Baratheon, llamado el Usurpador, hombre díscolo y otrora guerrero audaz cuyas mayores aficiones son comer, beber y engendrar bastardos. Eddard Stark ocupará el cargo de Mano del Rey e intentará desentrañar una maraña de intrigas que pondrá en peligro su vida y la de todos los suyos. En un mundo cuyas estaciones pueden durar decenios y en el que retazos de una magia inmemorial y olvidada surgen en los rincones más sombríos y maravillosos, la traición y la lealtad, la compasión y la sed de venganza, el amor y el poder hacen del juego de tronos una poderosa trampa que atrapará en sus fauces a los personajes... y al lector.",
-	 "img": "img/img2.jpg"
+	 "nombre": "Pollo asado con pimientos y cebolletas",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img3.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
 	},
-	{
+	 {
 	 "id": "3",
-	 "titulo": "I robot",
-	 "autor": "Isaac Asimov",
-	 "editorial": "Edhasa",
-	 "descripcion": "Los robots de Isaac Asimov son máquinas capaces de llevar a cabo muy diversas tareas, y que a menudo se plantean a sí mismos problemas de 'conducta humana'. Pero estas cuestiones se resuelven en Yo, robot en el ámbito de las tres leyes fundamentales de la robótica, concebidas por Asimov, y que no dejan de proponer extraordinarias paradojas que a veces se explican por errores de funcionamiento y otras por la creciente complejidad de los 'programas'. Las paradojas que se plantean en estos relatos futuristas no son sólo ingeniosos ejercicios intelectuales sino sobre todo una indagación sobre la situación del hombre actual en relación con los avances tecnológicos y con la experiencia del tiempo.",
-	 "img": "img/img3.jpg"
+	 "nombre": "Arroz Congri",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img1.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "4",
+	 "nombre": "Yuca con Moho",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "5",
+	 "nombre": "Arroz Congri con chicharrones",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "6",
+	 "nombre": "Arroz amarillo con Pollo",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "7",
+	 "nombre": "Arroz a la cubana",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "8",
+	 "nombre": "Papas rellenas con carne molida",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "9",
+	 "nombre": "Papas fritas ala marinera",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
+	},
+	 {
+	 "id": "10",
+	 "nombre": "Pizza a la carbonera",
+	 "ingredientes": "1 espadilla de ternera (1.300 gr), 2 pimientos morrones, 1 cebolleta, 6 lonchas de tocineta (finitas), 1 cucharada de harina de maíz refinada, aceite de oliva virgen extra, 100 ml de vino de jerez seco",
+	 "preparacion": "E Salpimienta la espaldilla. Hazle 3 cortes e introduce las lonchas de tocineta y la rama de romero. Ata la pieza con cuerda de cocina y colócala en una placa de horno. Rocía con aceite, vierte el vino, un poco de agua y espolvorea con tomillo y orégano. Hornea a 200ºC durante 30 minutos. A los 20 minutos añade un poco más de agua.",
+	 "foto": "styles/images/img2.jpg",
+	 "tiempopreparacion": "30 minutos",
+         "raciones": "4 personas",
+	"valoraciones": "",
+	"comentarios": ""
 	}
 ]

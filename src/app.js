@@ -4,19 +4,24 @@ angular.module('app', []).
 config(['$routeProvider', function($routes) {
 
     $routes.
-    when('/libros', {
-        templateUrl: 'views/libros-list.html',
-        controller: LibrosListController
+    when('/recipes', {
+        templateUrl: 'views/recipes-list.html',
+        controller: RecipesListController
     }).
 
-    //mediante dos puntos (:) definimos un parámetro
-    when('/libro/:libroId', {
-        templateUrl: 'views/libro.html',
-        controller: LibroDetailController
+    when('/login', {
+        templateUrl: 'login.html',
+        controller: LoginController
     }).
+
+   /* //mediante dos puntos (:) definimos un parámetro
+    when('/recipes/:recipeId', {
+        templateUrl: 'views/libro.html',
+        controller: RecipeDetailController
+    }).*/
 
     //cualquier ruta no definida
     otherwise({
-        redirectTo: '/libros'});
+        redirectTo: '/recipes'});
 
 }]);

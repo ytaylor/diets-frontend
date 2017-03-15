@@ -1,0 +1,146 @@
+
+<div class="st-container">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#sidebar-chat" data-toggle="sidebar-menu" class="toggle pull-right visible-xs"><i class="fa fa-comments"></i></a>
+                <a class="navbar-brand" href="index.html">TheCousini</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="nav navbar-nav  navbar-right ">
+                    <!-- User -->
+                    <li class="dropdown">
+                       <a href="../login.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </div>
+
+    <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+    <!-- sidebar effects OUTSIDE of st-pusher: -->
+    <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+
+    <!-- content push wrapper -->
+    <div class="st-pusher" id="content">
+
+        <!-- sidebar effects INSIDE of st-pusher: -->
+        <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+        <!-- this is the wrapper for the content -->
+        <div class="st-content">
+
+            <!-- extra div for emulating position:fixed of the menu -->
+            <div class="st-content-inner">
+
+                <div class="container">
+                    <div class="cover profile">
+                        <div class="wrapper">
+                            <div class="image">
+                                <img src="styles/images/profile-cover.jpg" alt="people" />
+                            </div>
+                        </div>
+
+                        <h1 class="text-display-2 text-overlay">TheCousini</h1>
+                        <form class="col-sm-12" role="search">
+                            <div class="search-2">
+                                <div class="input-group">
+                                    <input  ng-model="query.nombre" type="text" class="form-control form-control-w-150" placeholder="Search ..">
+                                    <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                 </span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="cover-info">
+                        </div>
+                    </div>
+
+                    <div class="timeline row" data-toggle="isotope">
+
+                        <div ng-repeat="obj in libros | filter:query | orderBy:orderField:orderReverse">
+                            <div class="col-xs-12 col-md-6 col-lg-4 item">
+                                <div class="timeline-block">
+                                    <div class="panel panel-default">
+
+                                        <div class="panel-heading">
+                                            <div class="media">
+
+                                                <div class="media-body">
+                                                    <a href="#" class="pull-right text-muted"><i class="icon-reply-all-fill fa fa-2x "></i></a>
+                                                    <a href="">{{obj.nombre}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <img src={{obj.foto}} class="img-responsive">
+                                        <ul class="comments">
+                                            <li clas="media">
+
+                                                <div class="media-body">
+                                                    <div class="pull-right dropdown" data-show-hover="li">
+                                                        <a href="#" data-toggle="dropdown" class="toggle-button">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </a>
+                                                        <ul class="dropdown-menu" role="menu">
+                                                            <li><a href="#">Edit</a></li>
+                                                            <li><a href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                     <span>{{obj.preparacion}}</span>
+                                                    <div class="comment-date">2 days</div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /st-content-inner -->
+
+        </div>
+        <!-- /st-content -->
+
+    </div>
+    <!-- /st-pusher -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <strong>TheCousini</strong> &copy; Copyright 2017
+    </footer>
+    <!-- // Footer -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
