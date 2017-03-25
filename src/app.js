@@ -1,27 +1,23 @@
-angular.module('app', []).
+angular.module('app', ["ngRoute"]).
+   config(function($routeProvider){
+        $routeProvider
+            .when('/', {
+            templateUrl: 'views/recipes-list.html',
+            controller: RecipesListController
+             })
+            .when('/login', {
+            templateUrl: 'login.html',
+            controller: LoginController
+            })
+            . when('/createrecipes', {
+            templateUrl: 'views/create_recipe.html',
+            controller: CreateRecipeController
+            })
+            .otherwise({ redirect: '/'});
 
-//definimos las rutas de la 'app'
-config(['$routeProvider', function($routes) {
-
-    $routes.
-    when('/recipes', {
-        templateUrl: 'views/recipes-list.html',
-        controller: RecipesListController
-    }).
-
-    when('/login', {
-        templateUrl: 'login.html',
-        controller: LoginController
-    }).
-
-   /* //mediante dos puntos (:) definimos un parámetro
-    when('/recipes/:recipeId', {
-        templateUrl: 'views/libro.html',
-        controller: RecipeDetailController
-    }).*/
-
-    //cualquier ruta no definida
-    otherwise({
-        redirectTo: '/recipes'});
-
-}]);
+       /* //mediante dos puntos (:) definimos un parámetro
+        when('/recipes/:recipeId', {
+            templateUrl: 'views/libro.html',
+            controller: RecipeDetailController
+        }).*/
+});

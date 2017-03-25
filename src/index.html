@@ -14,10 +14,12 @@
     TIP: Using bundles will improve performance by reducing the number of network requests the client needs to make when loading the page. -->
   <link href="styles/css/vendor/all.css" rel="stylesheet">
 
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="controllers/RecipesListController.js"></script>
   <script src="controllers/LoginController.js"></script>
+  <script src="controllers/CreateRecipeController.js"></script>
 
   <!-- Vendor CSS Standalone Libraries
         NOTE: Some of these may have been customized (for example, Bootstrap).
@@ -91,9 +93,33 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 
 </head>
 
-<body>
+<body >
 
-  <div ng-view></div>
+
+  <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+  <!-- sidebar effects OUTSIDE of st-pusher: -->
+  <!-- st-effect-1, st-effect-2, st-effect-4, st-effect-5, st-effect-9, st-effect-10, st-effect-11, st-effect-12, st-effect-13 -->
+
+  <!-- content push wrapper -->
+
+
+    <!-- sidebar effects INSIDE of st-pusher: -->
+    <!-- st-effect-3, st-effect-6, st-effect-7, st-effect-8, st-effect-14 -->
+
+    <!-- this is the wrapper for the content -->
+    <div ng-view></div>
+    <!-- /st-content -->
+  <!-- /st-pusher -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <strong>TheCousini</strong> &copy; Copyright 2017
+  </footer>
+  <!-- // Footer -->
+
+</div>
+
+
 
 
   <!-- Vendor Scripts Bundle
