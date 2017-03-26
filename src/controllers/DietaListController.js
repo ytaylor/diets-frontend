@@ -1,0 +1,3 @@
+function DietaListController($scope, $http) {
+
+}
