@@ -3,8 +3,8 @@
 * Controlador del listado de libros
 */
 function RecipesListController($scope, $http) {
-  $http.get('data/libros.json').success(function(data) {
-	$scope.libros = data;
+  $http.get('http://localhost/backend-api/web/app_dev.php/recetas').success(function(data) {
+	$scope.libros = data._embedded.recetas;
   });
  
   //defines una variable
