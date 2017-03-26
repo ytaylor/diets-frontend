@@ -1,0 +1,111 @@
+<div class="st-container">
+    <h4 class="page-section-heading">Crear Dieta</h4>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">Titulo de la Dieta</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="Escriba aqui...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Sobre la dieta</label>
+                    <div class="col-sm-9">
+                        <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <hr>
+                <div class="form-group">
+                        <label class="col-sm-3 control-label">Horario</label>
+                        <div class="col-sm-9 ">
+                            <select name="select" class="selectpicker" data-style="btn-white" data-live-search="true" data-size="5">
+                                <option>Desayuno</option>
+                                <option>Merienda</option>
+                                <option>Almuerzo</option>
+                                <option>Merienda</option>
+                                <option>Comida</option>
+                                <option>Antes de Dormir</option>
+                            </select>
+                        </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Recetas Disponibles</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input type="text" class="form-control" ng-model="newItem" id="input" placeholder="Seleccione la receta y presione mas...">
+                            <span class="input-group-btn">
+                                        <button class="btn btn-inverse" ng-click="addToList(newItem)"  type="button">+</button>
+                                    </span>
+                        </div>
+                        <ul>
+                            <li ng-repeat="item in myIngredients track by $index">{{item}}</li>
+                        </ul>
+
+                        <!-- /input-group -->
+                    </div>
+                </div>
+
+
+                <div>
+                <label class="col-sm-3 control-label">Dieta </label>
+                <div class="col-sm-9">
+                <div class="table-responsive">
+                    <table class="table v-middle">
+                        <thead>
+                        <tr>
+                            <th width="20">
+                            </th>
+                            <th>Horario</th>
+                            <th>Recetas</th>
+                            <th class="text-right">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="responsive-table-body">
+                        <tr>
+                            <td>
+                                <div class="checkbox checkbox-single">
+                                    <input id="checkbox1" type="checkbox" checked>
+                                    <label for="checkbox1">Label</label>
+                                </div>
+                            </td>
+                            <td><span class="label label-default">Desayuno</span></td>
+                            <td>
+                                Arroz con pollo
+                            </td>
+                            <td class="text-right">
+                                <a href="#" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                                <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                        class="fa fa-times"></i></a>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                </div>
+
+                <hr>
+                <div class="form-group margin-none">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">Publicar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <strong>TheCousini</strong> &copy; Copyright 2017
+    </footer>
+    <!-- // Footer -->
+
+</div>
