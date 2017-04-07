@@ -2,16 +2,16 @@ angular.module('app', ["ngRoute"]).
    config(function($routeProvider){
         $routeProvider
             .when('/', {
-            templateUrl: 'views/recipes-list.html',
-            controller: RecipesListController
+                templateUrl: 'views/recipes-list.html',
+                controller: RecipesListController
              })
             .when('/login', {
-            templateUrl: 'login.html',
-            controller: LoginController
+                templateUrl: 'login.html',
+                controller: LoginController
             })
             . when('/createrecipes', {
-            templateUrl: 'views/create_recipe.html',
-            controller: CreateRecipeController
+                templateUrl: 'views/create_recipe.html',
+                controller: CreateRecipeController
             })
             . when('/createdieta', {
                 templateUrl: 'views/create_dieta.html',

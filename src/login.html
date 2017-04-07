@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="hide-sidebar ls-bottom-footer" lang="en">
+<html class="hide-sidebar ls-bottom-footer" lang="en" ng-app="app">
 
 <head>
   <meta charset="utf-8">
@@ -12,7 +12,26 @@
   <!-- Vendor CSS BUNDLE
     Includes styling for all of the 3rd party libraries used with this module, such as Bootstrap, Font Awesome and others.
     TIP: Using bundles will improve performance by reducing the number of network requests the client needs to make when loading the page. -->
+
+
   <link href="styles/css/vendor/all.css" rel="stylesheet">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
+  <script src="app.js"></script>
+
+  <script src="controllers/RecipesListController.js"></script>
+  <script src="controllers/LoginController.js"></script>
+  <script src="controllers/CreateRecipeController.js"></script>
+  <script src="controllers/DietaController.js"></script>
+  <script src="controllers/PerfilController.js"></script>
+  <script src="controllers/DietaDetailController.js"></script>
+  <script src="controllers/LoginController.js"></script>
+  <script src="controllers/TimelineController.js"></script>
+  <script src="controllers/RecipesListUserController.js"></script>
+  <script src="controllers/DietaListController.js"></script>
+
+
 
   <!-- Vendor CSS Standalone Libraries
         NOTE: Some of these may have been customized (for example, Bootstrap).
@@ -86,8 +105,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 
 </head>
 
-<body class="login">
-
+<body class="login" ng-controller="LoginController">
   <div id="content">
     <div class="container-fluid">
 
@@ -105,16 +123,19 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                   <img class="profile-img"
                        src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120" alt="">
                 </div>
-            <input class="form-control" type="text" placeholder="Username">
-            <input class="form-control" type="password" placeholder="Enter Password">
 
+                <form>
+                <input class="form-control" type="text" placeholder="Correo electronico" ng-model="usuario" >
+                <input class="form-control" type="password" placeholder="Contraseña" ng-model="contrasena" >
 
-            <a href="index_user.html#/timeline" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
-            <a href="#" class="forgot-password">Forgot password?</a>
+                <a href="" ng-click="postdatalogin(usuario, contrasena)" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
+                <a href="" class="btn btn-primary" ng-click="postdata(usuario, contrasena)">Registratse <i class="fa fa-fw fa-unlock-alt"></i></a>
+                </form>
+
+             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
