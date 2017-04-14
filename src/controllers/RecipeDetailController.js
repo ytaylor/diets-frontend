@@ -1,15 +1,13 @@
 /**
-* LibroDetailController
-* Controlador de la ficha del libro
 * $scope - ámbito
 * $http - 
 * $routeParams - parámetros de la ruta
 */
 function RecipeDetailController($scope, $http, $routeParams) {
-  $scope.id = $routeParams.libroId;
+  $scope.id = $routeParams.recipeId;
+  $http.get('http://localhost/backend-api/web/app_dev.php/api/receta/'+$scope.id).success(function(data) {
 
-  $http.get('data/libro'+$scope.id+'.json').success(function(data) {
-	  $scope.libro = data[0];
+      $scope.receta = data;
   });
  
 }

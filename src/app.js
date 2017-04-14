@@ -1,4 +1,4 @@
-angular.module('app', ["ngRoute"]).
+angular.module('app', ["ngRoute", 'angular-timeline']).
    config(function($routeProvider){
         $routeProvider
             .when('/', {
@@ -12,6 +12,7 @@ angular.module('app', ["ngRoute"]).
             . when('/createrecipes', {
                 templateUrl: 'views/create_recipe.html',
                 controller: CreateRecipeController
+
             })
             . when('/createdieta', {
                 templateUrl: 'views/create_dieta.html',
@@ -25,13 +26,17 @@ angular.module('app', ["ngRoute"]).
                 templateUrl: 'views/timeline.html',
                 controller: TimelineController
             })
-            . when('/listrecipesuser', {
-                templateUrl: 'views/list_recepes-user.html',
+            . when('/listrecipesuser/:userId', {
+                templateUrl: 'views/recipes_user_list.html',
                 controller: RecipesListUserController
             })
-            . when('/listdietasuser', {
-                templateUrl: 'views/list_dieta_user',
+            . when('/listdietasuser/:userId', {
+                templateUrl: 'views/list_dieta_user.html',
                 controller: DietaListController
+            })
+            . when('/recipes/:recipeId', {
+                templateUrl: 'views/recipe_detail.html',
+                controller: RecipeDetailController
             })
             .otherwise({ redirect: '/'});
 

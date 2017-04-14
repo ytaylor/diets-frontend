@@ -1,10 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="row" >
+<div class="col-md-3">
+    <ul class="nav timeline-months">
+        <li class="active"><a href="#/timeline"><i class="fa fa-calendar fa-fw"></i>Inicio</a></li>
+        <li><a href="#/createrecipes"><i class="fa fa-calendar fa-fw"></i>Crear Recetas</a></li>
+        <li><a href="#/createdieta"><i class="fa fa-calendar fa-fw"></i>Crear Dietas</a></li>
+        <li><a href="#/listrecipesuser/1"><i class="fa fa-calendar fa-fw"></i>Mis Recetas</a></li>
+        <li><a href="#/listdietasuser/1"><i class="fa fa-calendar fa-fw"></i>Mis Dietas</a></li>
+        <li><a href="#/perfil"><i class="fa fa-fw icon-user-1"></i>Mi Perfil</a></li>
 
-</body>
-</html>
+    </ul>
+</div>
+    <div class="col-md-9">
+<timeline>
+    <timeline-event ng-repeat="event in allevents" side="right">
+        <timeline-panel class="{{event.badgeClass}}">
+            <div class="row" style="margin:0px" >
+
+                <div class="col-lg-4">
+                <a href="#">
+                <img  src="styles/images/img3.jpg" alt="image" class="img-responsive" />
+            </a>
+                </div>
+
+                <div class="col-lg-8" style="margin-top:15px" >
+            <a href="#/recipes/{{event.id}}" class="h2">{{event.nombre}}</a>
+                    <div class="text-muted">
+                        <small><i class=""></i> {{event.raciones}}</small>
+                        <small><i class=""></i> {{event.tiempopreparacion}}</small>
+                        <small><i class=""></i> {{event.raciones}}</small>
+                    </div>
+                    <p>{{event.descripcion}}</p>
+
+
+                    <div class="panel-body">
+                        <img src="styles/images/people/50/guy-2.jpg" alt="people" class="img-circle" />
+                        <img src="styles/images/people/50/woman-2.jpg" alt="people" class="img-circle" />
+                        <img src="styles/images/people/50/guy-3.jpg" alt="people" class="img-circle" />
+                        <img src="styles/images/people/50/woman-3.jpg" alt="people" class="img-circle" />
+                        <a href="#" class="user-count-circle">12+</a>
+
+                        <a href="#" class=""">Seguir</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </timeline-panel>
+    </timeline-event>
+</timeline>
+
+</div>
+</div>
+

@@ -1,10 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="st-container">
+<h4 class="page-section-heading">Recetas</h4>
+<div class="panel panel-default">
+    <!-- Progress table -->
+    <div class="table-responsive">
+        <table class="table v-middle">
+            <thead>
+            <tr>
+                <th width="20">
+                    <div class="checkbox checkbox-single margin-none">
+                        <input id="checkAll" data-toggle="check-all" data-target="#responsive-table-body" type="checkbox" checked>
+                        <label for="checkAll">Check All</label>
+                    </div>
+                </th>
+                <th>Nombre</th>
+                <th>Foto</th>
+                <th>Descripcion</th>
+                <th>Tiempo de Preparacion</th>
+                <th>Raciones</th>
+                <th class="text-right">Acciones</th>
+            </tr>
+            </thead>
+            <tbody id="responsive-table-body">
 
-</body>
-</html>
+
+
+            <tr ng-repeat="receta in recetasuser track by receta.id">
+                <td>
+                    <div class="checkbox checkbox-single">
+                        <input id="checkbox2" type="checkbox" checked>
+                        <label for="checkbox2">Label</label>
+                    </div>
+                </td>
+                <td><span>{{receta.nombre}}</span></td>
+                <td>
+                    <img ng-src="http://localhost/backend-api/web/images/recetas/{{receta.image_name}}" width="40" class="img-circle" />
+
+                </td>
+                <td>{{receta.descripcion}}</td>
+                <td>{{receta.tiempopreparacion}}<a href="#"><i class="fa fa-clock-o fa-fw text-muted"></i></a></td>
+                <td> {{receta.raciones}}</td>
+                <td class="text-right">
+                    <a href="#" class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-pencil"></i></a>
+                    <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Delete"><i
+                            class="fa fa-times"></i></a>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <!-- // Progress table -->
+
+   <!-- <div class="panel-footer padding-none text-center">
+        <ul class="pagination">
+            <li class="disabled"><a href="#">&laquo;</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>-->
+</div>
+</div>

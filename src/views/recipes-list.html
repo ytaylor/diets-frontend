@@ -21,9 +21,9 @@
                     <li class="dropdown">
                         <a href="login.html#/login">Log In</a>
                     </li>
-            </div>
             </ul>
             <!-- /.navbar-collapse -->
+            </div>
         </div>
     </div>
     <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
@@ -60,7 +60,7 @@
                                     <input  ng-model="query.nombre" type="text" class="form-control form-control-w-150" placeholder="Search ..">
                                     <span class="input-group-btn">
                                     <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
-                 </span>
+                            </span>
                                 </div>
                             </div>
                         </form>
@@ -81,12 +81,12 @@
 
                                                 <div class="media-body">
                                                     <a href="#" class="pull-right text-muted"><i class="icon-reply-all-fill fa fa-2x "></i></a>
-                                                    <a href="">{{obj.nombre}}</a>
+                                                    <a href="#/recipes/{{obj.id}}">{{obj.nombre}}</a>
                                                 </div>
-                                            </div>t
+                                            </div>
                                         </div>
 
-                                        <img src="{{obj.picture}}" class="img-responsive">
+                                        <img ng-src="http://localhost/backend-api/web/images/recetas/{{obj.image_name}}" class="img-responsive">
                                         <ul class="comments">
                                             <li clas="media">
 
@@ -100,8 +100,8 @@
                                                             <li><a href="#">Delete</a></li>
                                                         </ul>
                                                     </div>
-                                                    <span>{{obj.preparacion}}</span>
-                                                    <div class="comment-date">2 days</div>
+                                                    <span>{{obj.descripcion}}</span>
+                                                    <div class="comment-date">{{obj.tiempopreparacion}}</div>
                                                 </div>
                                             </li>
 

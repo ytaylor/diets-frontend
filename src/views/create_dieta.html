@@ -35,17 +35,28 @@
 
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Recetas Disponibles</label>
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <input type="text" class="form-control" ng-model="newItem" id="input" placeholder="Seleccione la receta y presione mas...">
-                            <span class="input-group-btn">
-                                        <button class="btn btn-inverse" ng-click="addToList(newItem)"  type="button">+</button>
-                                    </span>
-                        </div>
-                        <ul>
-                            <li ng-repeat="item in myIngredients track by $index">{{item}}</li>
-                        </ul>
 
+                    <div class="col-sm-9">
+                        <form>
+                            <div class="input-group">
+                                <select ng-model="todoText" ng-options="receta as receta.nombre for receta in recetas track by receta.id" >
+                                    <option value="">--Elige opcion--</option>
+                                </select>
+                                <span class="input-group-btn">
+                                        <button class="btn btn-inverse" ng-click="addRecetas()"  type="button">+</button>
+                                    </span>
+                            </div>
+                        </form>
+
+                        <span>{{remaining()}} of {{recetas_diets.length}} Recetas para la preparacion</span>
+                        <a href="" ng-click="archive()"> [ eliminar ]</a>
+
+                        <ul>
+                            <li ng-repeat="todo in recetas_diets">
+                                <input type="checkbox" ng-model="todo.done">
+                                <span class="done-{{todo.done}}">{{todo.text}}</span>
+                            </li>
+                        </ul>
                         <!-- /input-group -->
                     </div>
                 </div>

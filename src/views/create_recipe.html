@@ -1,79 +1,106 @@
 
-  <div class="st-container" ng-controller="CreateRecipeController" >
+  <div class="st-container">
       <h4 class="page-section-heading">Escribir Receta</h4>
       <div class="panel panel-default">
           <div class="panel-body">
+
               <form class="form-horizontal" role="form">
                   <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-3 control-label">Titulo de la Receta</label>
+                      <label class="col-sm-3 control-label" >Titulo de la Receta</label>
                       <div class="col-sm-9">
-                          <input type="email" class="form-control" id="inputEmail3" placeholder="Escriba aqui...">
+                          <input ng-model="nombre"  class="form-control" placeholder="Escriba aqui..." >
                       </div>
                   </div>
 
                   <div class="form-group">
                       <label class="col-sm-3 control-label">Sobre la receta</label>
                       <div class="col-sm-9">
-                          <textarea class="form-control" rows="5"></textarea>
+                          <textarea class="form-control" rows="5" ></textarea>
                       </div>
                   </div>
 
                   <div class="form-group" >
                       <label class="col-sm-3 control-label">Ingredientes</label>
                       <div class="col-sm-9">
+                          <form>
                           <div class="input-group">
-                              <input type="text" class="form-control" ng-model="newItem" id="input" placeholder="Escriba el ingredietnte y presione mas...">
+                              <input type="text" class="form-control" ng-model="todoText" id="input" placeholder="Escriba el ingredietnte y presione mas...">
                               <span class="input-group-btn">
-                                        <button class="btn btn-inverse" ng-click="addToList(newItem)"  type="button">+</button>
+                                        <button class="btn btn-inverse" ng-click="addIngredients()" type="button">+</button>
                                     </span>
                           </div>
+                          </form>
+
+                          <span>{{remaining()}} of {{ingredientes.length}} ingredientes</span>
+                           <a href="" ng-click="archive()"> [ eliminar ]</a>
+
                           <ul>
-                              <li ng-repeat="item in myIngredients track by $index">{{item}}</li>
+                              <li ng-repeat="todo in ingredientes">
+                                  <input type="checkbox" ng-model="todo.done">
+                                  <span class="done-{{todo.done}}">{{todo.text}}</span>
+                              </li>
                           </ul>
 
-                          <!-- /input-group -->
                       </div>
                   </div>
 
                   <div class="form-group">
-                      <label class="col-sm-3 control-label">Preparacion</label>
+                      <label class="col-sm-3 control-label" style="text-align: right">Preparacion</label>
                       <div class="col-sm-9">
+                          <form>
                           <div class="input-group">
-                              <input type="text" class="form-control" ng-model="newItem"  placeholder="Escriba los pasos de preparacion...">
+                              <input type="text" class="form-control" ng-model="todoTextPreparacion" placeholder="Escriba los pasos de preparacion...">
                               <span class="input-group-btn">
-                                        <button class="btn btn-inverse" ng-click="addToList(newItem)"  type="button">+</button>
+                                        <button class="btn btn-inverse"  ng-click="addPreparacion()"  type="button">+</button>
                                     </span>
                           </div>
+                          </form>
+                          <span>{{remainingPreparacion()}} of {{preparacion.length}} Pasos de Prearacion</span>
+                          <a href="" ng-click="archivePreparaciones()"> [ eliminar ]</a>
+
                           <ul>
-                              <li ng-repeat="item in myIngredients track by $index">{{item}}</li>
+                              <li ng-repeat="todo in preparacion">
+                                  <input type="checkbox" ng-model="todo.done">
+                                  <span class="done-{{todo.donePreparacion}}">{{todo.text}}</span>
+                              </li>
                           </ul>
-
-                          <!-- /input-group -->
                       </div>
                   </div>
 
                   <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-3 control-label">Tiempo de preparacion</label>
+                      <label class="col-sm-3 control-label" style="text-align: right">Tiempo de preparacion</label>
                       <div class="col-sm-9">
-                          <input type="email" class="form-control"  placeholder="Escriba aqui...">
+                          <input style="margin-bottom: 15px" ng-model="tiempo_preparacion" class="form-control" nplaceholder="Escriba aqui...">
                       </div>
                   </div>
 
-                  <div class="form-group">
-                      <label for="inputEmail3" class="col-sm-3 control-label">Cantidad de raciones</label>
+
+                 <div class="form-group">
+                      <label class="col-sm-3 control-label" style="text-align: right">Cantidad de raciones</label>
                       <div class="col-sm-9">
-                          <input type="email" class="form-control"  placeholder="Escriba aqui...">
+                          <input style="margin-bottom: 15px" ng-model="raciones" class="form-control"  placeholder="Escriba aqui...">
+                      </div>
+                 </div>
+
+
+                  <div class="form-group">
+                      <label class="col-sm-3 control-label" style="text-align: right">Fotos</label>
+                      <div  class="col-sm-9">
+
+                          <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this.files)"/>-->
+                         <br>
                       </div>
                   </div>
+
 
 
                   <div class="form-group margin-none">
-                      <div class="col-sm-offset-3 col-sm-9">
-                          <button type="submit" class="btn btn-primary">Publicar</button>
-                          <button type="submit" class="btn btn-primary">Guardar</button>
+                      <div class="col-sm-offset-10 col-sm-6">
+                          <a href="" ng-click="createrecipe(nombre, raciones, tiempo_preparacion)" class="btn btn-primary">Publicar </a>
+
+                          <button type="submit" class="btn btn-primary">Cancelar</button>
                       </div>
                   </div>
-
 
               </form>
           </div>

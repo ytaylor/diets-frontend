@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="st-layout ls-top-navbar ls-bottom-footer hide-sidebar sidebar-r2" lang="en" >
+<html class="st-layout ls-top-navbar ls-bottom-footer hide-sidebar sidebar-r2" lang="en" ng-app="app">
 
 <head>
   <meta charset="utf-8">
@@ -9,8 +9,18 @@
   <meta name="author" content="">
   <title>TheCousini</title>
 
+
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular-route.js"></script>
+
+  <script src="../app/bower_components/angular-timeline/dist/angular-timeline.js"></script>
+  <link rel="stylesheet" href="../app/bower_components/angular-timeline/dist/angular-timeline.css"/>
+  <link rel="stylesheet" href="../app/bower_components/angular-timeline/dist/angular-timeline-bootstrap.css" />
+  <script src="../app/bower_components/angular-timeline/dist/angular-timeline.js"></script>
+
+
+
+  <script src="styles/js/angular-file-upload.min.js"></script>
   <script src="app.js"></script>
   <script src="controllers/RecipesListController.js"></script>
   <script src="controllers/LoginController.js"></script>
@@ -21,6 +31,9 @@
   <script src="controllers/TimelineController.js"></script>
   <script src="controllers/CreateRecipeController.js"></script>
   <script src="controllers/DietaController.js"></script>
+
+  <script src="controllers/RecipeDetailController.js"></script>
+
 
   <!-- Vendor CSS BUNDLE
     Includes styling for all of the 3rd party libraries used with this module, such as Bootstrap, Font Awesome and others.
@@ -131,7 +144,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="user-private-profile.html">Mi Perfil</a></li>
-                <li><a href="user-private-messages.html">Mis Recetas</a></li>
+                <li><a href="#/listrecipesuser">Mis Recetas</a></li>
                 <li><a href="user-private-messages.html">Mis Dietas</a></li>
                 <li><a href="login.html">Logout</a></li>
               </ul>
@@ -173,8 +186,8 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
                   <li><a href="#/timeline"><i class="fa fa-fw icon-ship-wheel"></i> Inicio</a></li>
                   <li><a href="#/createrecipes"><i class="fa fa-fw icon-ship-wheel"></i> Crear recetas</a></li>
                   <li><a href="#/createdieta"><i class="fa fa-fw icon-ship-wheel"></i> Crear dietas</a></li>
-                  <li><a href="#/listrecipesuser"><i class="fa fa-fw icon-ship-wheel"></i> Mis Recetas</a></li>
-                  <li><a href="#/listdietasuser"><i class="fa fa-fw icon-ship-wheel"></i> Mis Dietas</a></li>
+                  <li><a href="#/listrecipesuser/1"><i class="fa fa-fw icon-ship-wheel"></i> Mis Recetas</a></li>
+                  <li><a href="#/listdietasuser/1"><i class="fa fa-fw icon-ship-wheel"></i> Mis Dietas</a></li>
                   <li><a href="#/perfil"><i class="fa fa-fw icon-user-1"></i> Mi Perfil</a></li>
                 </ul>
               </div>
