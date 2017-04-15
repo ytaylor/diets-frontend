@@ -1,4 +1,4 @@
-angular.module('app', ["ngRoute", 'angular-timeline']).
+angular.module('app', ["ngRoute", 'angular-timeline', 'angular-jwt']).
    config(function($routeProvider){
         $routeProvider
             .when('/', {
