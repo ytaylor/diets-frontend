@@ -122,14 +122,16 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
     <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="#sidebar-chat" data-toggle="sidebar-menu" class="toggle pull-right visible-xs"><i class="fa fa-comments"></i></a>
-          <a class="navbar-brand" href="index_user.html">TheCousisni</a>
+
+          <a class="navbar-brand" style="border-right-color:transparent;"  href="index_user.html">TheCousisni</a>
+          <div style="width:450px; margin-top: 6px;" class="input-group">
+            <input type="text" class="form-control" placeholder="Busca recetas, dietas, personas...">
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+            </span>
+          </div>
+
+
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
