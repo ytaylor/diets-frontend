@@ -2,7 +2,7 @@
  * LoginController
  * Controlador del login de los usuarios
  */
-function LoginController($scope, $http, $window, jwtHelper , store) {
+function LoginController($scope, $http, $window, jwtHelper) {
     $scope.username = null;
     $scope.password = null;
     $scope.postdata = function (usuario, contrasena) {
@@ -14,7 +14,6 @@ function LoginController($scope, $http, $window, jwtHelper , store) {
         $http.post('http://localhost/backend-api/web/app_dev.php/register', JSON.stringify(data))
             .then(function (response) {
                 if (response.data) {
-                    store.set('token', response.data.token);
                     localStorage.setItem('token',response.data.token);
                     $scope.msg = "Post Data Submitted Successfully!";
                     $location.path('index_user.html#/timeline');

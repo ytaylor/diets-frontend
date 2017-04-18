@@ -116,7 +116,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 <body ng-app="app">
 
   <!-- Wrapper required for sidebar transitions -->
-  <div class="st-container">
+  <div class="st-container" ng-controller="UserController">
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-main navbar-primary navbar-fixed-top" role="navigation">
@@ -141,7 +141,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
             <!-- User -->
             <li class="">
               <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
-                <img ng-src="http://localhost/backend-api/web/images/recetas/{{foto}}" class="img-circle" width="40" /> {{nombre}}<span class="caret"></span>
+                <img ng-src="http://localhost/backend-api/web/images/usuarios/{{foto}}" class="img-circle" width="40" /> {{nombre}}<span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="user-private-profile.html">Mi Perfil</a></li>
@@ -180,7 +180,7 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
               </div>
               <div class="cover-info">
                 <div class="avatar">
-                  <img ng-src="http://localhost/backend-api/web/images/recetas/{{foto}}" alt="people" />
+                  <img ng-src="http://localhost/backend-api/web/images/usuarios/{{foto}}" alt="people" />
                 </div>
                 <div class="name"><a href="#">{{nombre}}</a></div>
                 <ul class="cover-nav">

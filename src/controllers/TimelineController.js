@@ -5,20 +5,17 @@ function TimelineController($scope, $http , jwtHelper ) {
     $scope.allevents=[];
 
     $scope.data= new Date().toISOString().substring(0, 10);
-    var tokenPayload = jwtHelper.decodeToken(localStorage.getItem('token'));
+    $scope.tokenPayload = jwtHelper.decodeToken(localStorage.getItem('token'));
+    var id =$scope.tokenPayload.id;
 
-    $http.get('http://localhost/backend-api/web/app_dev.php/api/timeline/'+tokenPayload.id/'2017-04-04 00:00:00').success(function(data) {
-        $scope.events = data.recetas;
+    $http.get('http://localhost/backend-api/web/app_dev.php/api/timeline/'+id+'/'+ $scope.data +' 00:00:00').success(function(data) {
+        $scope.events = data;
         angular.forEach($scope.events, function(value, key)
-        {
-            //Para obtener el objeto de tu lista
+        {//Para obtener el objeto de tu lista
             angular.forEach(value, function(vvv, kkk)
             {
                 $scope.allevents.push(vvv);
             });
         });
     });
-
-
-
 }
