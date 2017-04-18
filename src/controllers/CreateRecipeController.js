@@ -30,8 +30,8 @@ function CreateRecipeController($scope, $http) {
                         fd.append("file", $scope.foto);
 
                         $http.post('http://localhost/backend-api/web/app_dev.php/api/receta/'+response.data.id +'/picture', fd, {
+                            skipAuthorization: false,
                             withCredentials: true,
-                            headers: {'Content-Type': undefined },
                             transformRequest: angular.identity
                         }).then(function (response) {
                             if (response.data) {

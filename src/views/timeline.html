@@ -7,29 +7,28 @@
         <li><a href="#/listrecipesuser/1"><i class="fa fa-calendar fa-fw"></i>Mis Recetas</a></li>
         <li><a href="#/listdietasuser/1"><i class="fa fa-calendar fa-fw"></i>Mis Dietas</a></li>
         <li><a href="#/perfil"><i class="fa fa-fw icon-user-1"></i>Mi Perfil</a></li>
-
     </ul>
 </div>
+
     <div class="col-md-9">
 <timeline>
-    <timeline-event ng-repeat="event in allevents" side="right">
-        <timeline-panel class="{{event.badgeClass}}">
+    <timeline-event ng-repeat="obj in events" side="right">
+        <timeline-panel>
             <div class="row" style="margin:0px" >
-
                 <div class="col-lg-4">
                 <a href="#">
-                <img  src="styles/images/img3.jpg" alt="image" class="img-responsive" />
-            </a>
+                <img ng-src="http://localhost/backend-api/web/images/recetas/{{obj.image_name}}" alt="image" class="img-responsive" />
+                </a>
                 </div>
 
                 <div class="col-lg-8" style="margin-top:15px" >
-            <a href="#/recipes/{{event.id}}" class="h2">{{event.nombre}}</a>
+            <a href="#/recipes/{{obj.id}}" class="h2">{{obj.nombre}}</a>
                     <div class="text-muted">
-                        <small><i class=""></i> {{event.raciones}}</small>
-                        <small><i class=""></i> {{event.tiempopreparacion}}</small>
-                        <small><i class=""></i> {{event.raciones}}</small>
+                        <small><i class=""></i> {{obj.raciones}}</small>
+                        <small><i class=""></i> {{obj.tiempopreparacion}}</small>
+                        <small><i class=""></i> {{obj.raciones}}</small>
                     </div>
-                    <p>{{event.descripcion}}</p>
+                    <p>{{obj.descripcion}}</p>
 
 
                     <div class="panel-body">
@@ -39,7 +38,7 @@
                         <img src="styles/images/people/50/woman-3.jpg" alt="people" class="img-circle" />
                         <a href="#" class="user-count-circle">12+</a>
 
-                        <a href="#" class=""">Seguir</a>
+                        <a href="#" class="">Seguir</a>
                     </div>
 
                 </div>

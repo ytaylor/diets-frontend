@@ -34,7 +34,7 @@
   <script src="controllers/DietaController.js"></script>
 
   <script src="controllers/RecipeDetailController.js"></script>
-
+  <script src="controllers/UserController.js"></script>
 
   <!-- Vendor CSS BUNDLE
     Includes styling for all of the 3rd party libraries used with this module, such as Bootstrap, Font Awesome and others.
@@ -139,9 +139,9 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
           <ul class="nav navbar-nav  navbar-right ">
 
             <!-- User -->
-            <li class="dropdown">
+            <li class="">
               <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
-                <img src="styles/images/people/110/guy-5.jpg" alt="Bill" class="img-circle" width="40" /> Yanelis Serrano Taylor <span class="caret"></span>
+                <img ng-src="http://localhost/backend-api/web/images/recetas/{{foto}}" class="img-circle" width="40" /> {{nombre}}<span class="caret"></span>
               </a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="user-private-profile.html">Mi Perfil</a></li>
@@ -180,9 +180,9 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
               </div>
               <div class="cover-info">
                 <div class="avatar">
-                  <img src="styles/images/people/110/guy-5.jpg" alt="people" />
+                  <img ng-src="http://localhost/backend-api/web/images/recetas/{{foto}}" alt="people" />
                 </div>
-                <div class="name"><a href="#">Bill Demian</a></div>
+                <div class="name"><a href="#">{{nombre}}</a></div>
                 <ul class="cover-nav">
                   <li><a href="#/timeline"><i class="fa fa-fw icon-ship-wheel"></i> Inicio</a></li>
                   <li><a href="#/createrecipes"><i class="fa fa-fw icon-ship-wheel"></i> Crear recetas</a></li>

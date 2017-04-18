@@ -1,5 +1,12 @@
-angular.module('app', ["ngRoute", 'angular-timeline', 'angular-jwt']).
-   config(function($routeProvider){
+angular.module('app', ["ngRoute", 'angular-timeline', 'angular-jwt', 'angular-storage']).
+   config(function($routeProvider, jwtInterceptorProvider, $httpProvider){
+
+        jwtInterceptorProvider.tokenGetter = function() {
+
+            return localStorage.getItem('token');
+        };
+        $httpProvider.interceptors.push('jwtInterceptor');
+
         $routeProvider
             .when('/', {
                 templateUrl: 'views/recipes-list.html',
@@ -8,6 +15,10 @@ angular.module('app', ["ngRoute", 'angular-timeline', 'angular-jwt']).
             .when('/login', {
                 templateUrl: 'login.html',
                 controller: LoginController
+            })
+            .when('/index_user', {
+                templateUrl: 'index_user.html',
+                controller: UserController
             })
             . when('/createrecipes', {
                 templateUrl: 'views/create_recipe.html',
