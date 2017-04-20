@@ -18,8 +18,8 @@
   <link rel="stylesheet" href="../app/bower_components/angular-timeline/dist/angular-timeline-bootstrap.css" />
   <script src="../app/bower_components/angular-timeline/dist/angular-timeline.js"></script>
   <script src="../app/bower_components/angular-jwt/dist/angular-jwt.js"></script>
-
-
+  <script src="../app/bower_components/angucomplete/angucomplete.js"></script>
+  <link rel="stylesheet" href="../app/bower_components/angucomplete/angucomplete.css" />
 
   <script src="styles/js/angular-file-upload.min.js"></script>
   <script src="app.js"></script>
@@ -33,6 +33,8 @@
   <script src="controllers/CreateRecipeController.js"></script>
   <script src="controllers/DietaController.js"></script>
 
+
+
   <script src="controllers/RecipeDetailController.js"></script>
   <script src="controllers/UserController.js"></script>
 
@@ -40,6 +42,7 @@
     Includes styling for all of the 3rd party libraries used with this module, such as Bootstrap, Font Awesome and others.
     TIP: Using bundles will improve performance by reducing the number of network requests the client needs to make when loading the page. -->
   <link href="styles/css/vendor/all.css" rel="stylesheet">
+
 
   <!-- Vendor CSS Standalone Libraries
         NOTE: Some of these may have been customized (for example, Bootstrap).
@@ -125,6 +128,19 @@ WARNING: Respond.js doesn't work if you view the page via file:// -->
 
           <a class="navbar-brand" style="border-right-color:transparent;"  href="index_user.html">TheCousisni</a>
           <div style="width:450px; margin-top: 6px;" class="input-group">
+
+            <angucomplete id="ex2"
+                          placeholder="Buscar Recetas"
+                          pause="300"
+                          selectedobject="selectedPerson"
+                          localdata="people"
+                          searchfields="nombre"
+                          titlefield="nombre"
+                          descriptionfield="twitter"
+                          minlength="1"
+                          inputclass="form-control form-control-small"
+                          matchclass="highlight" />
+
             <input type="text" class="form-control" placeholder="Busca recetas, dietas, personas...">
             <span class="input-group-btn">
               <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>

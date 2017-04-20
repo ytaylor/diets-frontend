@@ -8,5 +8,6 @@ function PerfilController($scope, $http,  jwtHelper ) {
 
     $http.get('http://localhost/backend-api/web/app_dev.php/api/user/'+id).success(function(data) {
         $scope.user = data.usuario;
+        $scope.friends= data.usuario.my_friends;
     });
 }

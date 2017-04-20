@@ -1,5 +1,5 @@
-angular.module('app', ["ngRoute", 'angular-timeline', 'angular-jwt']).
-   config(function($routeProvider, jwtInterceptorProvider, $httpProvider){
+angular.module('app', ["ngRoute", 'angular-timeline', 'angular-jwt', "angucomplete"]).
+    config(function($routeProvider, jwtInterceptorProvider, $httpProvider){
 
         jwtInterceptorProvider.tokenGetter = function() {
 

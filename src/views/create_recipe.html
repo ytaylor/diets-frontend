@@ -15,7 +15,7 @@
                   <div class="form-group">
                       <label class="col-sm-3 control-label">Sobre la receta</label>
                       <div class="col-sm-9">
-                          <textarea class="form-control" rows="5" ></textarea>
+                          <textarea  ng-model="descripcion" class="form-control" rows="5" ></textarea>
                       </div>
                   </div>
 
@@ -70,7 +70,7 @@
                   <div class="form-group">
                       <label class="col-sm-3 control-label" style="text-align: right">Tiempo de preparacion</label>
                       <div class="col-sm-9">
-                          <input style="margin-bottom: 15px" ng-model="tiempo_preparacion" class="form-control" nplaceholder="Escriba aqui...">
+                          <input style="margin-bottom: 15px" ng-model="tiempopreparacion" class="form-control" nplaceholder="Escriba aqui...">
                       </div>
                   </div>
 
@@ -96,7 +96,7 @@
 
                   <div class="form-group margin-none">
                       <div class="col-sm-offset-10 col-sm-6">
-                          <a href="" ng-click="createrecipe(nombre, raciones, tiempo_preparacion)" class="btn btn-primary">Publicar </a>
+                          <a href="" ng-click="createrecipe(nombre, raciones, tiempopreparacion, descripcion)" class="btn btn-primary">Publicar </a>
 
                           <button type="submit" class="btn btn-primary">Cancelar</button>
                       </div>

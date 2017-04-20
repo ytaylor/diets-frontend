@@ -5,18 +5,19 @@ function CreateRecipeController($scope, $http) {
     $scope.preparacion = [];
     $scope.nombre = null;
     $scope.raciones = null;
-    $scope.tiempo_preparacion = null;
+    $scope.tiempopreparacion = null;
     $scope.ingredientesjson= [];
     $scope.preparacionjson = [];
     $scope.foto= null;
+    $scope.descripcion = null;
 
-
-    $scope.createrecipe = function (nombre, raciones, tiempo_preparacion) {
+    $scope.createrecipe = function (nombre, raciones, tiempo_preparacion, descripcion) {
 
         var data = {
             nombre:  nombre,
             raciones:  raciones,
-            tiempo_preparacion: tiempo_preparacion,
+            tiempopreparacion: tiempo_preparacion,
+            descripcion: descripcion,
             ingredientes:   $scope.ingredientesjson,
             preparacion: $scope.preparacionjson
     };
@@ -28,6 +29,7 @@ function CreateRecipeController($scope, $http) {
                         var fd = new FormData();
                         //Take the first selected file
                         fd.append("file", $scope.foto);
+
 
                         $http.post('http://localhost/backend-api/web/app_dev.php/api/receta/'+response.data.id +'/picture', fd, {
                             skipAuthorization: false,
@@ -47,6 +49,7 @@ function CreateRecipeController($scope, $http) {
                     $scope.ingredientes = [];
                     $scope.preparacion = [];
                     $scope.nombre = null;
+                    $scope.descripcion = null;
                     $scope.raciones = null;
                     $scope.tiempo_preparacion = null;
                     $scope.ingredientesjson= [];

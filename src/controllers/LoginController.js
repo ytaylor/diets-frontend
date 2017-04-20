@@ -15,15 +15,18 @@ function LoginController($scope, $http, $window, jwtHelper) {
             .then(function (response) {
                 if (response.data) {
                     localStorage.setItem('token',response.data.token);
-                    $scope.msg = "Post Data Submitted Successfully!";
-                    $location.path('index_user.html#/timeline');
-                    $location.path('/');
+                    $scope.msg = "Su usuario se ha creado satisfactoriamente!";
+                    $window.location.path('index_user.html#/timeline');
+
                 }
             }, function (response) {
-                $scope.msg = "Service not Exists";
+                $scope.msg = "Ha ocurrido un error vuelva a intenatrlo";
                 $scope.statusval = response.status;
                 $scope.statustext = response.statusText;
                 $scope.headers = response.headers();
+                $scope.username = null;
+                $scope.password = null;
+                alert($scope.msg);
             });
     }
 
@@ -42,10 +45,11 @@ function LoginController($scope, $http, $window, jwtHelper) {
 
                 }
             }, function (response) {
-                $scope.msg = "Service not Exists";
+                $scope.msg = "Ha ocurrido un error, vuelva a intentarlo";
                 $scope.statusval = response.status;
                 $scope.statustext = response.statusText;
                 $scope.headers = response.headers();
+                alert($scope.msg);
             });
     }
 

@@ -1,6 +1,5 @@
 <div class="container">
-
-    <div class="tabbable">
+    <div style="margin-left:15%; margin-right: 10%" class="tabbable">
         <ul class="nav nav-tabs">
             <li class="active"><a href="#home" data-toggle="tab"><i class="fa fa-fw fa-picture-o"></i> Mi foto de perfil</a></li>
         </ul>
@@ -19,8 +18,8 @@
         </div>
         </div>
 
-        <div class="row">
-        <div class="col-md-6">
+
+     <!--   <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-gray">
                     <a href="#" class="btn btn-white btn-xs pull-right"><i class="fa fa-pencil"></i></a>
@@ -67,8 +66,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="col-md-6">
+        </div>-->
+
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-gray">
                     <div class="pull-right">
@@ -76,20 +75,22 @@
                     </div>
                     <i class="icon-user-1"></i> Amigos
                 </div>
-                <div class="panel-body">
+                <div class="panel-body" ng-repeat="friend in friends">
                     <ul class="img-grid">
                         <li>
-                            <a href="#">
-                                <img src="styles/images/people/110/guy-6.jpg" alt="image" />
-                            </a>
+                            <img ng-src="http://localhost/backend-api/web/images/usuarios/{{friend.image_avatar}}" alt="image" />
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="#"> <h5>{{friend.username}}</h5>   </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div>
-        </div>
 
-       <div class="panel panel-default">
+
+    <!--   <div class="panel panel-default">
         <div class="panel-heading panel-heading-gray">
             <i class="fa fa-bookmark"></i> Bookmarks
         </div>
@@ -166,6 +167,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 
 </div>
